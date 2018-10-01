@@ -1,20 +1,26 @@
-%SideBer
-  %SideBer__top
-    %SideBer__h3 seo
-    %SideBer__box font-awsome
-  %SideBar__bottom
-    %SideBer__h4 sample
-    %SideBer__p good bye world!
-%chat
-  %Chat__top1
-    %Chat__h2 sample
-    %Chat__p Members seo neko
-  %Chat__top2
-    %Chat__h3 seo
-    %Chat__p Hello World!
-  %Chat__bottom
-    %Chat__h3 neko
-    %Chat__p Hello!
-
+.contents
+  .SideBer
+    .SideBer__top
+      .SideBer__name seo
+      = link_to do
+        %i.fa.fa-cog
+        %i.fa.fa-edit
+    .SideBer__bottom
+      %h4 sample
+      %p good bye world!
+  .Chat
+    .Chat__header
+      .Chat__button Edit
+      %h2 sample
+      %p MEMBER: seo neko
+    .Chat__contents
+      %h3 seo
+      %p Hello World!
+    .Chat__footer
+      .Chat__message type a message
+      %label.upload-label{for: "upload-icon"}
+        %i.fa.fa-picture-o
+        / = f.file_field :image, id: "upload-icon"
+      .Chat__send Send
 
 
