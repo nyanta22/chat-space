@@ -1,0 +1,6 @@
+.Chat__footer
+  .Chat__message type a message
+  %label.upload-label{for: "upload-icon"}
+    %i.fa.fa-picture-o
+    / = f.file_field :image, id: "upload-icon"
+    .Chat__send Send

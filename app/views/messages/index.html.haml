@@ -1,22 +1,10 @@
 .contents
   .SideBer
-    =render "messages/chat.top"
-    .SideBer__bottom
-      %h4 sample
-      %p good bye world!
+    =render "messages/sidebar.top"
+    =render "messages/sidebar.bottom"
   .Chat
-    .Chat__header
-      .Chat__button Edit
-      %h2 sample
-      %p MEMBER: seo neko
-    .Chat__contents
-      %h3 seo
-      %p Hello World!
-    .Chat__footer
-      .Chat__message type a message
-      %label.upload-label{for: "upload-icon"}
-        %i.fa.fa-picture-o
-        / = f.file_field :image, id: "upload-icon"
-      .Chat__send Send
+    =render "messages/chat.header"
+    =render "messages/chat.contents"
+    =render "messages/chat.footer"
 
 
