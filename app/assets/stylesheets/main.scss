@@ -1,0 +1,116 @@
+.contents {
+  .SideBer {
+    height: 700px;
+    float: left;
+    background-color: #2f3e51;
+    width: 300px;
+    .SideBer__top {
+      background-color: #000022;
+      height: 96px;
+       .SideBer__name {
+        float: left;
+        font-size: 16px;
+        font-weight: bold;
+        color: #FFFFFF;
+        margin: 20px 0 0 30px;
+      }
+       .fa.fa-cog{
+        float: right;
+        color: white;
+        margin: 35px 20px 0 0;
+       }
+       .fa.fa-edit{
+        float: right;
+        margin: 35px 0 0 0;
+        color: white;
+       }
+    }
+    .SideBer__bottom {
+       h4 {
+        font-size: 15px;
+        color: #FFFFFF;
+        margin: 20px 0 5px 20px;
+      }
+       p {
+        font-size: 11px;
+        color: #FFFFFF;
+        margin: 0 0 40px 20px;
+      }
+    }
+  }
+
+  .Chat {
+    width: calc(100vw - 300px);
+    float: left;
+    .Chat__header{
+      height: 74px;
+      border-bottom: solid #EEE thin;
+      .Chat__button{
+        float: right;
+        margin: 5px 50px 0 0;
+        border: solid #5FF thin;
+        padding: 10px 20px 10px 20px;
+        color: #333333;
+      }
+      h2 {
+        font-size: 20px;
+        color: #333333;
+        margin: 20px 0 0 40px;
+      }
+      p {
+        font-size: 12px;
+        color: #999999;
+        margin: 20px 0 0 40px;
+      }
+    }
+    .Chat__contents{
+      height: 467px;
+      margin: 0 0 0 40px;
+      h3 {
+        font-size: 10px;
+        font-weight: bold;
+        margin: 46px 0 10px 0px;
+      }
+      p {
+        font-size: 10px;
+      }
+    }
+    .Chat__footer{
+      height: 92px;
+      background-color:#CCC;
+      .Chat__message {
+        height: 45px;
+        width: 700px;
+        float: left;
+        margin: 20px 0 0 40px;
+        padding: 10px 0 0 10px;
+        font-size: 16px;
+        color: #434A54;
+        background-color: white;
+      }
+      .fa.fa-picture-o {
+        height: 35px;
+        float: left;
+        padding: 20px 15px 0 60px;
+        margin: 20px 0 0 0;
+        background-color: white;
+      }
+      .Chat__send{
+        height: 15px;
+        width: 100px;
+        float: right;
+        background-color: #5FF;
+        color: #FFFFFF;
+        margin: 20px 40px 20px 0;
+        padding: 15px 0 25px 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+
+
+
+
