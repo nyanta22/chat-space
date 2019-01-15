@@ -1,4 +1,8 @@
 .Chat__header
-  .Chat__button Edit
-  %h2 sample
-  %p MEMBER: seo neko
+  - current_user.groups.each do |group|
+    .group__name
+      = group.name
+    .Chat__button Edit
+    %p
+      Member:
+      = current_user.name
