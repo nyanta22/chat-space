@@ -4,5 +4,7 @@
     =render "messages/sidebar.bottom"
   .Chat
     =render "messages/chat.header"
-    =render "messages/chat.contents"
+    .messages
+      =render @messages
     =render "messages/chat.footer"
+
