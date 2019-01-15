@@ -1,12 +1,12 @@
 .contents {
   .SideBer {
-    height: 800px;
     float: left;
     width: 300px;
     background-color: #2f3e51;
+    height: 100vh;
     .SideBer__top {
       background-color: #000022;
-      height: 96px;
+      height: 15%;
        .SideBer__name {
         float: left;
         font-size: 16px;
@@ -22,6 +22,7 @@
     }
     .SideBer__bottom {
       background-color: #2f3e51;
+      height: 85%;
       .groups {
         .group {
           .group__name {
@@ -42,8 +43,9 @@
   .Chat {
     width: calc(100vw - 300px);
     float: left;
+    height: 100vh;
     .Chat__header{
-      height: 74px;
+      height: 15%;
       border-bottom: solid #EEE thin;
       .Chat__button{
         float: right;
@@ -55,28 +57,40 @@
       h2 {
         font-size: 20px;
         color: #333333;
-        margin: 20px 0 0 40px;
+        margin: 0 0 0 40px;
       }
       p {
         font-size: 12px;
         color: #999999;
-        margin: 20px 0 0 40px;
+        margin: 0 0 0 40px;
       }
     }
-    .Chat__contents{
-      height: 567px;
-      margin: 0 0 0 40px;
-      h3 {
-        font-size: 10px;
-        font-weight: bold;
-        margin: 46px 0 10px 0px;
-      }
-      p {
-        font-size: 10px;
+    .messages{
+      height:  calc( 100vh - 15% - 90px );
+      overflow-y: scroll;
+      .message {
+        padding-top: 26px;
+        padding-left: 40px;
+        .user__name {
+          color: #434A54;
+          font-size: 16px;
+          font-weight: bold;
+          float: left;
+        }
+        .message__time {
+          color: #999;
+          font-size: 12px;
+          padding: 0 10px 10px;
+          float: left;
+        }
+        .message__content {
+          color: #434A54;
+          clear: both;
+        }
       }
     }
     .Chat__footer{
-      height: 92px;
+      height: 90px;
       background-color:#CCC;
       .Chat__message {
         height: 45px;
