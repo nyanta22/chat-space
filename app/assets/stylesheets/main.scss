@@ -48,21 +48,24 @@
       height: 15%;
       border-bottom: solid #EEE thin;
       .Chat__button{
+        color: #38AEF0;
+        font-size: 15px;
+        padding: 12.5px 20px;
+        margin: 28px 20px 0;
+        border: 1px solid #38AEF0;
         float: right;
-        margin: 5px 50px 0 0;
-        border: solid #5FF thin;
-        padding: 10px 20px 10px 20px;
-        color: #333333;
       }
-      h2 {
+      .group__name {
+        color: #333;
         font-size: 20px;
-        color: #333333;
-        margin: 0 0 0 40px;
+        margin: 35px 0 15px 40px;
+        float: left;
       }
       p {
+        color: #999;
         font-size: 12px;
-        color: #999999;
-        margin: 0 0 0 40px;
+        margin: 0 40px;
+        clear: both;
       }
     }
     .messages{
