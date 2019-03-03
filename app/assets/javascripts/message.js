@@ -1,5 +1,5 @@
 $(function(){
-  function buildHTML(message){
+  function buildSendMessageHTML(message){
     var html = `<div class="message latest">
                   <div class="user__name">
                     ${message.name}
@@ -25,8 +25,8 @@ $(function(){
       processData: false,
       contentType: false
     })
-    .done(function(data){
-      var html = buildHTML(data);
+    .done(function(messageData){
+      var html = buildSendMessageHTML(messageData);
       $('.messages').append(html)
       $('.Chat__message').val('')
       $('.Chat__send').prop('disabled',false);
