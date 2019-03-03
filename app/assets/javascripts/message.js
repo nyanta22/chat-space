@@ -25,8 +25,8 @@ $(function(){
       processData: false,
       contentType: false
     })
-    .done(function(messageData){
-      var html = buildSendMessageHTML(messageData);
+    .done(function(send_message){
+      var html = buildSendMessageHTML(send_message);
       $('.messages').append(html)
       $('.Chat__message').val('')
       $('.Chat__send').prop('disabled',false);
