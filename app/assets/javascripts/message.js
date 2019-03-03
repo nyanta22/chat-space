@@ -10,7 +10,10 @@ $(function(){
                     <p class="message__content">
                       ${message.content}
                     </p>
-                  </div>`
+                    <div class="lower-message__image">
+                      <img src= '${message.image}'>
+                    </div>
+                </div>`
     return html;
   }
   $('#new_message').on('submit', function(e){
