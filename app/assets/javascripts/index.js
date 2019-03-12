@@ -23,6 +23,10 @@ function appendErrMsgToHTML(msg) {
     $(this).parent().remove();
   });
 
+  $(document).on('click', '.user-search-remove', function(){
+    $(this).parent().remove();
+  })
+
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
     $.ajax({
