@@ -2,7 +2,8 @@
   - current_user.groups.each do |group|
     .group__name
       = group.name
-    .Chat__button Edit
+    =link_to edit_group_path(group) do
+      .Chat__button Edit
     %p
       Member:
       = current_user.name
