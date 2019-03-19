@@ -1,6 +1,12 @@
 $(function(){
-  function buildSendMessageHTML(message){
-    var html = `<div class="message latest">
+  function buildMessageHTML(message){
+    var addImage = ''
+    if(message.image) {
+      addImage = `<div class="lower-message__image">
+                     <img src= '${message.image}'>
+                   </div>`
+    }
+    var html = `<div class="message", data-id=${message.id}>
                   <div class="user__name">
                     ${message.name}
                   </div>
@@ -10,12 +16,38 @@ $(function(){
                     <p class="message__content">
                       ${message.content}
                     </p>
-                    <div class="lower-message__image">
-                      <img src= '${message.image}'>
-                    </div>
+                    ${addImage}
                 </div>`
     return html;
   }
+
+  $(function(){
+    setInterval(automaticUpdate, 5000);
+    function automaticUpdate(){
+      if ($('.message')[0]) {
+        var message_id = $('.message:last').data('id');
+      } else {
+        var messsge_id = 0
+      }
+      $.ajax({
+        url: location.href,
+        type:'GET',
+        data: {
+          message: {id:message_id }
+        },
+        dataType: 'json'
+      })
+      .done(function(message){
+        $.each(message, function(i,new_message){
+          buildMessageHTML(new_message);
+        });
+      })
+      .fail(function(){
+        alert('error')
+      })
+    };
+  });
+
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -29,7 +61,7 @@ $(function(){
       contentType: false
     })
     .done(function(send_message){
-      var html = buildSendMessageHTML(send_message);
+      var html = buildMessageHTML(send_message);
       $('.messages').append(html)
       $('.Chat__message').val('')
       $('.Chat__send').prop('disabled',false);
