@@ -1,8 +1,8 @@
 $(function(){
   function buildMessageHTML(message){
-    message.image ? addImage = `<div class="lower-message__image">
-                                  <img src= '${message.image}'>
-                                </div>` : addImage = '';
+    var addImage = (message.image)? `<div class="lower-message__image">
+                                      <img src= '${message.image}'>
+                                    </div>` : ''
     var html = `<div class="message", data-id=${message.id}>
                   <div class="user__name">
                     ${message.name}
@@ -21,7 +21,7 @@ $(function(){
   $(function(){
     setInterval(automaticUpdate, 5000);
     function automaticUpdate(){
-      $('.message')[0] ? message_id = $('.message:last').data('id') : messsge_id = 0;
+       var message_id = $('.message')[0] ? $('.message:last').data('id') :0;
       $.ajax({
         url: location.href,
         type:'GET',
