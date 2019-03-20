@@ -30,13 +30,10 @@ $(function(){
         },
         dataType: 'json'
       })
-      .done(function(message){
+      .always(function(message){
         $.each(message, function(i,new_message){
           buildMessageHTML(new_message);
         });
-      })
-      .fail(function(){
-        alert('error')
       })
     };
   });
