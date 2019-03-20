@@ -24,11 +24,7 @@ $(function(){
   $(function(){
     setInterval(automaticUpdate, 5000);
     function automaticUpdate(){
-      if ($('.message')[0]) {
-        var message_id = $('.message:last').data('id');
-      } else {
-        var messsge_id = 0
-      }
+      $('.message')[0] ? message_id = $('.message:last').data('id') : messsge_id = 0;
       $.ajax({
         url: location.href,
         type:'GET',
